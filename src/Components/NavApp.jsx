@@ -1,6 +1,6 @@
-
 import React from 'react'
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from '@nextui-org/navbar'
+import { Switch, VisuallyHidden, useSwitch } from "@nextui-org/switch";
 import { Button } from '@nextui-org/react'
 import Link from 'next/link'
 import english from '@/Translate/en/Global.json'
@@ -9,22 +9,22 @@ import { RiInstagramLine, RiTwitterXFill, RiGithubFill, RiLinkedinBoxFill } from
 
 export const socialNetworks = [
   {
-    logo: <RiInstagramLine size="40" />,
-    src: "https://instagram.com/_jared1x_",
+    logo: <RiInstagramLine size='40' />,
+    src: 'https://instagram.com/_jared1x_'
   },
   {
-    logo: <RiGithubFill size="40" />,
-    src: "https://github.com/vaancillo",
+    logo: <RiGithubFill size='40' />,
+    src: 'https://github.com/vaancillo'
   },
   {
-    logo: <RiTwitterXFill size="40" />,
-    src: "https://twitter.com/jaredmazapann",
+    logo: <RiTwitterXFill size='40' />,
+    src: 'https://twitter.com/jaredmazapann'
   },
   {
-    logo: <RiLinkedinBoxFill size="40" />,
-    src: "www.linkedin.com/in/jared-p-9aba09271",
+    logo: <RiLinkedinBoxFill size='40' />,
+    src: 'www.linkedin.com/in/jared-p-9aba09271'
   }
-];
+]
 export default function NavApp () {
   const en = english[0].en.navbar
   const es = espanol[0].es.navbar
@@ -58,7 +58,7 @@ export default function NavApp () {
       <NavbarContent className='hidden sm:flex gap-4' justify='center'>
         <NavbarItem>
           <Link color='foreground' href='#'>
-            Features
+            {isTranslate ? en.Home : es.Home}
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
@@ -74,16 +74,33 @@ export default function NavApp () {
       </NavbarContent>
       <NavbarContent justify='end'>
         <NavbarItem className='hidden lg:flex'>
-        <div className='flex items-center justify-center gap-7'>
-                        {socialNetworks.map(({ logo, src }) => (
-                            <Link key={src} href={src} target="_blank" className='transition-all duration-300 hover:text-[#838383]'>{logo}</Link>
-                        ))}
-        </div>
+          <div className='flex items-center justify-center gap-7'>
+            {socialNetworks.map(({ logo, src }) => (
+              <Link key={src} href={src} target='_blank' className='transition-all duration-300 hover:text-[#838383]' rel='noreferrer'>{logo}</Link>
+            ))}
+          </div>
         </NavbarItem>
         <NavbarItem>
-          <Button as={Link} color='primary' href='#' variant='flat'>
-
-          </Button>
+        <div className="flex flex-col gap-2">
+      <Component {...getBaseProps()}>
+          <VisuallyHidden>
+            <input {...getInputProps()} />
+          </VisuallyHidden>
+          <div
+            {...getWrapperProps()}
+            className={slots.wrapper({
+              class: [
+                "w-8 h-8",
+                "flex items-center justify-center",
+                "rounded-lg bg-default-100 hover:bg-default-200",
+              ],
+            })}
+          >
+            {isSelected ? <SunIcon/> : <MoonIcon/>}
+          </div>
+      </Component>
+      <p className="text-default-500 select-none">Lights: {isSelected ? "on" : "off"}</p>
+      </div>
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
