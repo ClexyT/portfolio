@@ -1,10 +1,30 @@
+
 import React from 'react'
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from '@nextui-org/navbar'
 import { Button } from '@nextui-org/react'
 import Link from 'next/link'
-
 import english from '@/Translate/en/Global.json'
 import espanol from '@/Translate/es/Global.json'
+import { RiInstagramLine, RiTwitterXFill, RiGithubFill, RiLinkedinBoxFill } from 'react-icons/ri'
+
+export const socialNetworks = [
+  {
+    logo: <RiInstagramLine size="40" />,
+    src: "https://instagram.com/_jared1x_",
+  },
+  {
+    logo: <RiGithubFill size="40" />,
+    src: "https://github.com/vaancillo",
+  },
+  {
+    logo: <RiTwitterXFill size="40" />,
+    src: "https://twitter.com/jaredmazapann",
+  },
+  {
+    logo: <RiLinkedinBoxFill size="40" />,
+    src: "www.linkedin.com/in/jared-p-9aba09271",
+  }
+];
 export default function NavApp () {
   const en = english[0].en.navbar
   const es = espanol[0].es.navbar
@@ -54,11 +74,15 @@ export default function NavApp () {
       </NavbarContent>
       <NavbarContent justify='end'>
         <NavbarItem className='hidden lg:flex'>
-          <Link href='#' />
+        <div className='flex items-center justify-center gap-7'>
+                        {socialNetworks.map(({ logo, src }) => (
+                            <Link key={src} href={src} target="_blank" className='transition-all duration-300 hover:text-[#838383]'>{logo}</Link>
+                        ))}
+        </div>
         </NavbarItem>
         <NavbarItem>
           <Button as={Link} color='primary' href='#' variant='flat'>
-            Sign Up
+
           </Button>
         </NavbarItem>
       </NavbarContent>
