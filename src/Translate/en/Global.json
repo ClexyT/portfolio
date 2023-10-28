@@ -1,7 +1,15 @@
-[
-    {
-        "header":{
-            "Name":"Eduardo Aguilar"
+    [
+        {
+        "en":{
+                "header":{
+                    "Name":"Eduardo Aguilar"
+                },
+                "navbar":{
+                    "Home":"Home",
+                    "Portfolio":"Portfolio",
+                    "About":"About me",
+                    "Contact":"Contact me"
+                }
+            }
         }
-    }
-]
+    ]
