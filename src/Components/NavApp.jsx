@@ -1,8 +1,5 @@
 import React from 'react'
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from '@nextui-org/navbar'
-import { Switch, VisuallyHidden, useSwitch } from "@nextui-org/switch";
-import { Button } from '@nextui-org/react'
-import Link from 'next/link'
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Switch, VisuallyHidden, useSwitch, Button, Link } from '@nextui-org/react'
 import english from '@/Translate/en/Global.json'
 import espanol from '@/Translate/es/Global.json'
 import { RiInstagramLine, RiTwitterXFill, RiGithubFill, RiLinkedinBoxFill } from 'react-icons/ri'
@@ -57,18 +54,23 @@ export default function NavApp () {
 
       <NavbarContent className='hidden sm:flex gap-4' justify='center'>
         <NavbarItem>
-          <Link color='foreground' href='#'>
+          <Link href='#' color='foreground' underline='none'>
             {isTranslate ? en.Home : es.Home}
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
-          <Link href='#' aria-current='page'>
-            Customers
+          <Link href='#' color='foreground' underline='none'>
+            {isTranslate ? en.Porfolio : es.Porfolio}
+          </Link>
+        </NavbarItem>
+        <NavbarItem isActive>
+          <Link href='#' color='foreground' underline='none'>
+            {isTranslate ? en.About : es.About}
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color='foreground' href='#'>
-            Integrations
+          <Link href='#' color='foreground' underline='none'>
+            {isTranslate ? en.Contact : es.Contact}
           </Link>
         </NavbarItem>
       </NavbarContent>
@@ -81,26 +83,9 @@ export default function NavApp () {
           </div>
         </NavbarItem>
         <NavbarItem>
-        <div className="flex flex-col gap-2">
-      <Component {...getBaseProps()}>
-          <VisuallyHidden>
-            <input {...getInputProps()} />
-          </VisuallyHidden>
-          <div
-            {...getWrapperProps()}
-            className={slots.wrapper({
-              class: [
-                "w-8 h-8",
-                "flex items-center justify-center",
-                "rounded-lg bg-default-100 hover:bg-default-200",
-              ],
-            })}
-          >
-            {isSelected ? <SunIcon/> : <MoonIcon/>}
+          <div>
+            
           </div>
-      </Component>
-      <p className="text-default-500 select-none">Lights: {isSelected ? "on" : "off"}</p>
-      </div>
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
