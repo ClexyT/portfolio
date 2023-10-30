@@ -4,6 +4,7 @@ import english from '@/Translate/en/Global.json'
 import espanol from '@/Translate/es/Global.json'
 import { RiInstagramLine, RiTwitterXFill, RiGithubFill, RiLinkedinBoxFill } from 'react-icons/ri'
 import SM from '@/MediaTree.json'
+import DarkButton from './DarkButton'
 
 const sm = SM[0].Links[0]
 export const socialNetworks = [
@@ -80,14 +81,12 @@ export default function NavApp () {
         <NavbarItem className='hidden lg:flex'>
           <div className='flex items-center justify-center gap-7 '>
             {socialNetworks.map(({ logo, src }) => (
-              <Link key={src} href={src} target='_blank' className='transition-all duration-300 text-white hover:text-[#838383]' rel='noreferrer'>{logo}</Link>
+              <Link key={src} href={src} target='_blank' className='transition-all duration-300 dark:text-white text-black  hover:text-[#838383]' rel='noreferrer'>{logo}</Link>
             ))}
           </div>
         </NavbarItem>
         <NavbarItem>
-          <div>
-            
-          </div>
+          <DarkButton />
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
