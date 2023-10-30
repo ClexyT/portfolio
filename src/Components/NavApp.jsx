@@ -3,23 +3,25 @@ import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, Navba
 import english from '@/Translate/en/Global.json'
 import espanol from '@/Translate/es/Global.json'
 import { RiInstagramLine, RiTwitterXFill, RiGithubFill, RiLinkedinBoxFill } from 'react-icons/ri'
+import SM from '@/MediaTree.json'
 
+const sm = SM[0].Links[0]
 export const socialNetworks = [
   {
     logo: <RiInstagramLine size='40' />,
-    src: 'https://instagram.com/_jared1x_'
+    src: [sm.Social.Personal.Instagram]
   },
   {
     logo: <RiGithubFill size='40' />,
-    src: 'https://github.com/vaancillo'
+    src: [sm.Social.Personal.Github]
   },
   {
     logo: <RiTwitterXFill size='40' />,
-    src: 'https://twitter.com/jaredmazapann'
+    src: [sm.Social.Personal.Twitter]
   },
   {
     logo: <RiLinkedinBoxFill size='40' />,
-    src: 'www.linkedin.com/in/jared-p-9aba09271'
+    src: [sm.Work.Employee.Linkedin]
   }
 ]
 export default function NavApp () {
@@ -76,9 +78,9 @@ export default function NavApp () {
       </NavbarContent>
       <NavbarContent justify='end'>
         <NavbarItem className='hidden lg:flex'>
-          <div className='flex items-center justify-center gap-7'>
+          <div className='flex items-center justify-center gap-7 '>
             {socialNetworks.map(({ logo, src }) => (
-              <Link key={src} href={src} target='_blank' className='transition-all duration-300 hover:text-[#838383]' rel='noreferrer'>{logo}</Link>
+              <Link key={src} href={src} target='_blank' className='transition-all duration-300 text-white hover:text-[#838383]' rel='noreferrer'>{logo}</Link>
             ))}
           </div>
         </NavbarItem>
