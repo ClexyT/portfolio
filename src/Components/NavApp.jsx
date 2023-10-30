@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Switch, VisuallyHidden, useSwitch, Button, Link } from '@nextui-org/react'
 import english from '@/Translate/en/Global.json'
 import espanol from '@/Translate/es/Global.json'
@@ -9,19 +9,19 @@ import DarkButton from './DarkButton'
 const sm = SM[0].Links[0]
 export const socialNetworks = [
   {
-    logo: <RiInstagramLine size='40' />,
+    logo: <RiInstagramLine size='30' />,
     src: [sm.Social.Personal.Instagram]
   },
   {
-    logo: <RiGithubFill size='40' />,
+    logo: <RiGithubFill size='30' />,
     src: [sm.Social.Personal.Github]
   },
   {
-    logo: <RiTwitterXFill size='40' />,
+    logo: <RiTwitterXFill size='30' />,
     src: [sm.Social.Personal.Twitter]
   },
   {
-    logo: <RiLinkedinBoxFill size='40' />,
+    logo: <RiLinkedinBoxFill size='30' />,
     src: [sm.Work.Employee.Linkedin]
   }
 ]
@@ -29,7 +29,13 @@ export default function NavApp () {
   const en = english[0].en.navbar
   const es = espanol[0].es.navbar
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
-  const [isTranslate, setTranslate] = React.useState(false)
+  const [isTranslate, setTranslate] = React.useState(() => {
+    if (navigator.language.startsWith('es')) {
+      return (true)
+    } else {
+      return (false)
+    }
+  })
   const enMenuItems = [
     en.Home,
     en.Portfolio,
@@ -42,7 +48,23 @@ export default function NavApp () {
     es.About,
     es.Contact
   ]
-
+  // translate function
+  // useEffect(() => {
+  //   if (navigator.language.startsWith('es')) {
+  //     setTranslate(true)
+  //   } else {
+  //     setTranslate(false)
+  //   }
+  // }, [])
+  const TranslateButton = () => {
+    setTranslate(() => {
+      if (true) {
+        return false
+      } else {
+        return true
+      }
+    })
+  }
   return (
     <Navbar onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent>
@@ -51,7 +73,7 @@ export default function NavApp () {
           className='sm:hidden'
         />
         <NavbarBrand>
-          <h1 className=' cursor-default hover:text-blue-500'>{isTranslate ? 'My Portfolio' : 'Mi Portafolio'}</h1>
+          <h1 className=' cursor-default hover:text-blue-800 dark:hover:text-blue-300'>{isTranslate ? 'My Portfolio' : 'Mi Portafolio'}</h1>
         </NavbarBrand>
       </NavbarContent>
 
@@ -79,9 +101,9 @@ export default function NavApp () {
       </NavbarContent>
       <NavbarContent justify='end'>
         <NavbarItem className='hidden lg:flex'>
-          <div className='flex items-center justify-center gap-7 '>
+          <div className='flex ml-[3rem] items-center justify-center gap-7 '>
             {socialNetworks.map(({ logo, src }) => (
-              <Link key={src} href={src} target='_blank' className='transition-all duration-300 dark:text-white text-black  hover:text-[#838383]' rel='noreferrer'>{logo}</Link>
+              <Link key={src} href={src} target='_blank' className='transition-all duration-300 dark:text-white text-black hover:text-blue-800 dark:hover:text-blue-300' rel='noreferrer'>{logo}</Link>
             ))}
           </div>
         </NavbarItem>
