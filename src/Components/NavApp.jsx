@@ -58,7 +58,7 @@ export default function NavApp () {
   // }, [])
   const TranslateButton = () => {
     setTranslate(() => {
-      if (true) {
+      if (isTranslate === true) {
         return false
       } else {
         return true
@@ -109,6 +109,7 @@ export default function NavApp () {
         </NavbarItem>
         <NavbarItem>
           <DarkButton />
+          <button onClick={TranslateButton}>Translate</button>
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
