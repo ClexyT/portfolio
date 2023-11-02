@@ -3,6 +3,7 @@ import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, Navba
 import english from '@/Translate/en/Global.json'
 import espanol from '@/Translate/es/Global.json'
 import { RiInstagramLine, RiTwitterXFill, RiGithubFill, RiLinkedinBoxFill } from 'react-icons/ri'
+import { GrLanguage } from 'react-icons/gr'
 import SM from '@/MediaTree.json'
 import DarkButton from './DarkButton'
 
@@ -48,14 +49,6 @@ export default function NavApp () {
     es.About,
     es.Contact
   ]
-  // translate function
-  // useEffect(() => {
-  //   if (navigator.language.startsWith('es')) {
-  //     setTranslate(true)
-  //   } else {
-  //     setTranslate(false)
-  //   }
-  // }, [])
   const TranslateButton = () => {
     setTranslate(() => {
       if (isTranslate === true) {
@@ -100,16 +93,20 @@ export default function NavApp () {
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify='end'>
-        <NavbarItem className='hidden lg:flex'>
-          <div className='flex ml-[3rem] items-center justify-center gap-7 '>
+        <NavbarItem className='hidden lg:flex '>
+          <div className='items-center flex gap-5 justify-center'>
             {socialNetworks.map(({ logo, src }) => (
               <Link key={src} href={src} target='_blank' className='transition-all duration-300 dark:text-white text-black hover:text-blue-800 dark:hover:text-blue-300' rel='noreferrer'>{logo}</Link>
             ))}
+            <div className='flex'>
+              <button onClick={TranslateButton} className=' transition-all duration-300 dark:invert invert-0 text-white hover:fill-blue-800 dark:hover:fill-blue-300'>
+                <GrLanguage size='27' />
+              </button>
+              <div className='pl-8 pt-[0.12rem]'>
+                <DarkButton />
+              </div>
+            </div>
           </div>
-        </NavbarItem>
-        <NavbarItem>
-          <DarkButton />
-          <button onClick={TranslateButton}>Translate</button>
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
