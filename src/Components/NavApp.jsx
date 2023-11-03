@@ -121,6 +121,9 @@ export default function NavApp () {
               size='lg'
             >
               {item}
+              <button onClick={TranslateButton} className=' transition-all duration-300 dark:invert invert-0  hover:fill-blue-800 dark:hover:fill-blue-300'>
+                <GrLanguage size='27' className='text-[36px] hover:scale-110 hover:text-blue-800 dark:hover:text-blue-300 transition-all !sm:mr-10 bg-transparent border-none !sm:mr-10' />
+              </button>
             </Link>
           </NavbarMenuItem>
         ))}
