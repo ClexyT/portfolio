@@ -8,24 +8,6 @@ import SM from '@/MediaTree.json'
 import DarkButton from './DarkButton'
 
 const sm = SM[0].Links[0]
-export const socialNetworks = [
-  {
-    logo: <RiInstagramLine size='30' />,
-    src: [sm.Social.Personal.Instagram]
-  },
-  {
-    logo: <RiGithubFill size='30' />,
-    src: [sm.Social.Personal.Github]
-  },
-  {
-    logo: <RiTwitterXFill size='30' />,
-    src: [sm.Social.Personal.Twitter]
-  },
-  {
-    logo: <RiLinkedinBoxFill size='30' />,
-    src: [sm.Work.Employee.Linkedin]
-  }
-]
 export default function NavApp () {
   const en = english[0].en.navbar
   const es = espanol[0].es.navbar
@@ -74,21 +56,6 @@ export default function NavApp () {
         <NavbarItem>
           <Link href='/home' color='foreground' underline='none'>
             {isTranslate ? en.Home : es.Home}
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive>
-          <Link href='/portfolio' color='foreground' underline='none'>
-            {isTranslate ? en.Porfolio : es.Porfolio}
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive>
-          <Link href='/about' color='foreground' underline='none'>
-            {isTranslate ? en.About : es.About}
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link href='/contact' color='foreground' underline='none'>
-            {isTranslate ? en.Contact : es.Contact}
           </Link>
         </NavbarItem>
       </NavbarContent>
