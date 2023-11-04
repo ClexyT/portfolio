@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Switch, VisuallyHidden, useSwitch, Button, Link } from '@nextui-org/react'
 import english from '@/Translate/en/Global.json'
 import espanol from '@/Translate/es/Global.json'
@@ -72,22 +72,22 @@ export default function NavApp () {
 
       <NavbarContent className='hidden sm:flex gap-4' justify='center'>
         <NavbarItem>
-          <Link href='#' color='foreground' underline='none'>
+          <Link href='/home' color='foreground' underline='none'>
             {isTranslate ? en.Home : es.Home}
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
-          <Link href='#' color='foreground' underline='none'>
+          <Link href='/portfolio' color='foreground' underline='none'>
             {isTranslate ? en.Porfolio : es.Porfolio}
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
-          <Link href='#' color='foreground' underline='none'>
+          <Link href='/about' color='foreground' underline='none'>
             {isTranslate ? en.About : es.About}
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href='#' color='foreground' underline='none'>
+          <Link href='/contact' color='foreground' underline='none'>
             {isTranslate ? en.Contact : es.Contact}
           </Link>
         </NavbarItem>
