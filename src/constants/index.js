@@ -1,3 +1,25 @@
+import { RiInstagramLine, RiTwitterXFill, RiGithubFill, RiLinkedinBoxFill } from 'react-icons/ri'
+import SM from '@/MediaTree.json'
+const sm = SM[0].Links[0]
+
+export const navbarEs = [
+  {
+    Home: 'Home',
+    Portfolio: 'Portfolio',
+    About: 'About',
+    Contact: 'Contact'
+  }
+]
+
+export const navbarEn = [
+  {
+    Home: 'Home',
+    Portfolio: 'Portfolio',
+    About: 'About',
+    Contact: 'Contact'
+  }
+]
+
 export const socialNetworks = [
   {
     logo: <RiInstagramLine size='30' />,

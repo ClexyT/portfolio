@@ -2,12 +2,10 @@ import React from 'react'
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Switch, VisuallyHidden, useSwitch, Button, Link } from '@nextui-org/react'
 import english from '@/Translate/en/Global.json'
 import espanol from '@/Translate/es/Global.json'
-import { RiInstagramLine, RiTwitterXFill, RiGithubFill, RiLinkedinBoxFill } from 'react-icons/ri'
+import { socialNetworks } from '@/constants'
 import { GrLanguage } from 'react-icons/gr'
-import SM from '@/MediaTree.json'
 import DarkButton from './DarkButton'
 
-const sm = SM[0].Links[0]
 export default function NavApp () {
   const en = english[0].en.navbar
   const es = espanol[0].es.navbar
