@@ -4,10 +4,10 @@ const sm = SM[0].Links[0]
 
 export const navbarEs = [
   {
-    Home: 'Home',
-    Portfolio: 'Portfolio',
-    About: 'About',
-    Contact: 'Contact'
+    Home: 'Inicio',
+    Portfolio: 'Portafolio',
+    About: 'Sobre mi',
+    Contact: 'Contactame'
   }
 ]
 
@@ -15,8 +15,8 @@ export const navbarEn = [
   {
     Home: 'Home',
     Portfolio: 'Portfolio',
-    About: 'About',
-    Contact: 'Contact'
+    About: 'About me',
+    Contact: 'Contact me'
   }
 ]
 

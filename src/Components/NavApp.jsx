@@ -1,14 +1,12 @@
 import React from 'react'
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Switch, VisuallyHidden, useSwitch, Button, Link } from '@nextui-org/react'
-import english from '@/Translate/en/Global.json'
-import espanol from '@/Translate/es/Global.json'
-import { socialNetworks } from '@/constants'
+import { socialNetworks, navbarEn, navbarEs } from '@/constants'
 import { GrLanguage } from 'react-icons/gr'
 import DarkButton from './DarkButton'
 
 export default function NavApp () {
-  const en = english[0].en.navbar
-  const es = espanol[0].es.navbar
+  const en = navbarEn
+  const es = navbarEs
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
   const [isTranslate, setTranslate] = React.useState(() => {
     if (navigator.language.startsWith('es')) {
@@ -49,12 +47,18 @@ export default function NavApp () {
           <h1 className=' cursor-default hover:text-blue-800 dark:hover:text-blue-300'>{isTranslate ? 'My Portfolio' : 'Mi Portafolio'}</h1>
         </NavbarBrand>
       </NavbarContent>
-
       <NavbarContent className='hidden sm:flex gap-4' justify='center'>
         <NavbarItem>
-          <Link href='/home' color='foreground' underline='none'>
-            {isTranslate ? en.Home : es.Home}
-          </Link>
+          <div>
+            <ul>
+              {[isTranslate ? enMenuItems : esMenuItems].map(() => (
+              <li>
+                <Link href='/home' color='foreground' underline='none'>
+                </Link>
+              </li>
+              ))}
+            </ul>
+          </div>
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify='end'>
