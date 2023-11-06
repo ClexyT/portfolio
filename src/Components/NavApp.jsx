@@ -51,12 +51,10 @@ export default function NavApp () {
         <NavbarItem>
           <div>
             <ul>
-              {[isTranslate ? enMenuItems : esMenuItems].map((nav,index) => (
-              <li
-                
-              >
-                <Link href='/home' color='foreground' underline='none'>{}</Link>
-              </li>
+              {[isTranslate ? enMenuItems : esMenuItems].map((nav, index) => (
+                <li>
+                  <Link href='/home' color='foreground' underline='none'>{}</Link>
+                </li>
               ))}
             </ul>
           </div>
