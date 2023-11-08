@@ -7,6 +7,7 @@ import DarkButton from './DarkButton'
 export default function NavApp () {
   const en = navbarEn
   const es = navbarEs
+  let translated
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
   const [isTranslate, setTranslate] = React.useState(() => {
     if (navigator.language.startsWith('es')) {
@@ -15,18 +16,6 @@ export default function NavApp () {
       return (false)
     }
   })
-  const enMenuItems = [
-    en.Home,
-    en.Portfolio,
-    en.About,
-    en.Contact
-  ]
-  const esMenuItems = [
-    es.Home,
-    es.Portfolio,
-    es.About,
-    es.Contact
-  ]
   const TranslateButton = () => {
     setTranslate(() => {
       if (isTranslate === true) {
@@ -35,6 +24,11 @@ export default function NavApp () {
         return true
       }
     })
+  }
+  if (isTranslate === true) {
+    translated = en
+  } else if (isTranslate === false) {
+    translated = es
   }
   return (
     <Navbar onMenuOpenChange={setIsMenuOpen}>
@@ -48,17 +42,15 @@ export default function NavApp () {
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className='hidden sm:flex gap-4' justify='center'>
-        <NavbarItem>
-          <div>
-            <ul>
-              {[isTranslate ? enMenuItems : esMenuItems].map((nav, index) => (
-                <li>
-                  <Link href='/home' color='foreground' underline='none'>{}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </NavbarItem>
+        <div>
+          <ul>
+            {translated.map((nav, index) => (
+              <NavbarItem key={nav.id}>
+                <Link href={nav.id} underline='none'>{nav.title}</Link>
+              </NavbarItem>
+            ))}
+          </ul>
+        </div>
       </NavbarContent>
       <NavbarContent justify='end'>
         <NavbarItem className='hidden lg:flex '>
@@ -78,11 +70,11 @@ export default function NavApp () {
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
-        {[isTranslate ? esMenuItems : enMenuItems].map((item, index) => (
+        {translated.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
               color={
-                index === 2 ? 'primary' : index === [isTranslate ? esMenuItems : enMenuItems].length - 1 ? 'danger' : 'foreground'
+                index === 2 ? 'primary' : index === translated.length - 1 ? 'danger' : 'foreground'
               }
               className='w-full'
               href='#'

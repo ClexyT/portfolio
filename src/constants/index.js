@@ -4,29 +4,39 @@ const sm = SM[0].Links[0]
 
 export const navbarEs = [
   {
-    id: 'inicio',
+    id: 'home',
     title: 'Inicio'
   },
   {
-    id: 'portafolio',
+    id: 'portfolio',
     title: 'Portafolio'
   },
   {
-    id: 'sobre mi',
+    id: 'about me',
     title: 'Sobre mi'
   },
   {
-    id: 'contactame',
+    id: 'contact me',
     title: 'Contactame'
   }
 ]
 
 export const navbarEn = [
   {
-    Home: 'Home',
-    Portfolio: 'Portfolio',
-    About: 'About me',
-    Contact: 'Contact me'
+    id: 'home',
+    title: 'Home'
+  },
+  {
+    id: 'portfolio',
+    title: 'Portfolio'
+  },
+  {
+    id: 'about me',
+    title: 'About me'
+  },
+  {
+    id: 'contact me',
+    title: 'Contact me'
   }
 ]
 
