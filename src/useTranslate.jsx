@@ -1,6 +1,7 @@
 import React from 'react'
 
-const useTranslate = () => {
+const useTranslate = (languageA, languageB) => {
+  let Language
   const [isTranslate, setTranslate] = React.useState(() => {
     if (navigator.language.startsWith('es')) {
       return (true)
@@ -8,7 +9,7 @@ const useTranslate = () => {
       return (false)
     }
   })
-  const TranslateButton = () => {
+  const handleTranslate = () => {
     setTranslate(() => {
       if (isTranslate === true) {
         return false
@@ -17,12 +18,11 @@ const useTranslate = () => {
       }
     })
   }
-  const handleClick = () => {
-    // Add your logic here
-    // You can access the 'variable' state variable here
+  if (isTranslate === true) {
+    Language = languageB
+  } else if (isTranslate === false) {
+    Language = languageA
   }
-
-  return { variable, setVariable, handleClick }
+  return { handleTranslate, Language, isTranslate }
 }
-
 export default useTranslate

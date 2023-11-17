@@ -3,33 +3,13 @@ import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, Navba
 import { socialNetworks, navbarEn, navbarEs } from '@/constants'
 import { GrLanguage } from 'react-icons/gr'
 import DarkButton from './DarkButton'
+import useTranslate from '@/useTranslate'
 
 export default function NavApp () {
   const en = navbarEn
   const es = navbarEs
-  let translated
+  const translate = useTranslate(en, es)
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
-  const [isTranslate, setTranslate] = React.useState(() => {
-    if (navigator.language.startsWith('es')) {
-      return (true)
-    } else {
-      return (false)
-    }
-  })
-  const TranslateButton = () => {
-    setTranslate(() => {
-      if (isTranslate === true) {
-        return false
-      } else {
-        return true
-      }
-    })
-  }
-  if (isTranslate === true) {
-    translated = en
-  } else if (isTranslate === false) {
-    translated = es
-  }
   return (
     <Navbar onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent>
@@ -38,11 +18,11 @@ export default function NavApp () {
           className='sm:hidden'
         />
         <NavbarBrand>
-          <h1 className=' cursor-default hover:text-blue-800 dark:hover:text-blue-300'>{isTranslate ? 'My Portfolio' : 'Mi Portafolio'}</h1>
+          <h1 className=' cursor-default hover:text-blue-800 dark:hover:text-blue-300'>{translate.isTranslate ? 'Mi Portafolio' : 'My Portfolio'}</h1>
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className='hidden sm:flex gap-4' justify='center'>
-        {translated.map((nav, index) => (
+        {translate.Language.map((nav, index) => (
           <NavbarItem key={nav.id} isActive>
             <Link href={nav.id} color='foreground' aria-current='page' underline='hover'>{nav.title}</Link>
           </NavbarItem>
@@ -55,7 +35,7 @@ export default function NavApp () {
               <Link key={src} href={src} target='_blank' className='transition-all duration-300 dark:text-white text-black hover:text-blue-800 dark:hover:text-blue-300' rel='noreferrer'>{logo}</Link>
             ))}
             <div className='flex'>
-              <button onClick={TranslateButton} className=' transition-all duration-300 dark:invert invert-0 text-white hover:fill-blue-800 dark:hover:fill-blue-300'>
+              <button onClick={translate.handleTranslate} className=' transition-all duration-300 dark:invert invert-0 text-white hover:fill-blue-800 dark:hover:fill-blue-300'>
                 <GrLanguage size='27' />
               </button>
               <div className='pl-8 pt-[0.12rem]'>
@@ -66,18 +46,18 @@ export default function NavApp () {
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
-        {translated.map((item, index) => (
+        {translate.Language.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
               color={
-                index === 2 ? 'primary' : index === translated.length - 1 ? 'danger' : 'foreground'
+                index === 2 ? 'primary' : index === translate.Language.length - 1 ? 'danger' : 'foreground'
               }
               className='w-full'
               href='#'
               size='lg'
             >
               {item}
-              <button onClick={TranslateButton} className=' transition-all duration-300 dark:invert invert-0  hover:fill-blue-800 dark:hover:fill-blue-300'>
+              <button onClick={translate.handleTranslate} className=' transition-all duration-300 dark:invert invert-0  hover:fill-blue-800 dark:hover:fill-blue-300'>
                 <GrLanguage size='27' className='text-[36px] hover:scale-110 hover:text-blue-800 dark:hover:text-blue-300 transition-all !sm:mr-10 bg-transparent border-none !sm:mr-10' />
               </button>
             </Link>
