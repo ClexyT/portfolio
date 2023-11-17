@@ -2,6 +2,25 @@ import { RiInstagramLine, RiTwitterXFill, RiGithubFill, RiLinkedinBoxFill } from
 import SM from '@/MediaTree.json'
 const sm = SM[0].Links[0]
 
+// NAVBAR SECCION
+export const socialNetworks = [
+  {
+    logo: <RiInstagramLine size='30' />,
+    src: [sm.Social.Personal.Instagram]
+  },
+  {
+    logo: <RiGithubFill size='30' />,
+    src: [sm.Social.Personal.Github]
+  },
+  {
+    logo: <RiTwitterXFill size='30' />,
+    src: [sm.Social.Personal.Twitter]
+  },
+  {
+    logo: <RiLinkedinBoxFill size='30' />,
+    src: [sm.Work.Employee.Linkedin]
+  }
+]
 export const navbarEs = [
   {
     id: 'home',
@@ -39,22 +58,20 @@ export const navbarEn = [
     title: 'Contact me'
   }
 ]
-
-export const socialNetworks = [
+// ABOUT SECCION
+export const aboutMeEs = [
   {
-    logo: <RiInstagramLine size='30' />,
-    src: [sm.Social.Personal.Instagram]
-  },
+    id: 'about me',
+    title: 'Sobre mi',
+    description: 'Desarrollador Frontend con 2 años de experiencia',
+    image: '/images/AboutMe.jpg'
+  }
+]
+export const aboutMeEn = [
   {
-    logo: <RiGithubFill size='30' />,
-    src: [sm.Social.Personal.Github]
-  },
-  {
-    logo: <RiTwitterXFill size='30' />,
-    src: [sm.Social.Personal.Twitter]
-  },
-  {
-    logo: <RiLinkedinBoxFill size='30' />,
-    src: [sm.Work.Employee.Linkedin]
+    id: 'about me',
+    title: 'About me',
+    description: 'Frontend Developer with 2 years of experience',
+    image: '/images/AboutMe.jpg'
   }
 ]

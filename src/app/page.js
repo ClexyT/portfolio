@@ -1,10 +1,13 @@
 'use client'
-// import NavApp from '@/Components/NavApp'
+
+import About from './About'
+import Proyects from './Proyects'
 
 export default function page () {
   return (
     <>
-      {/* <NavApp /> */}
+      <About />
+      <Proyects />
     </>
   )
 }

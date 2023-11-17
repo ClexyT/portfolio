@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Switch, VisuallyHidden, useSwitch, Button, Link } from '@nextui-org/react'
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link } from '@nextui-org/react'
 import { socialNetworks, navbarEn, navbarEs } from '@/constants'
 import { GrLanguage } from 'react-icons/gr'
 import DarkButton from './DarkButton'
@@ -42,15 +42,11 @@ export default function NavApp () {
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className='hidden sm:flex gap-4' justify='center'>
-        <div>
-          <ul>
-            {translated.map((nav, index) => (
-              <NavbarItem key={nav.id}>
-                <Link href={nav.id} underline='none'>{nav.title}</Link>
-              </NavbarItem>
-            ))}
-          </ul>
-        </div>
+        {translated.map((nav, index) => (
+          <NavbarItem key={nav.id} isActive>
+            <Link href={nav.id} color='foreground' aria-current='page' underline='hover'>{nav.title}</Link>
+          </NavbarItem>
+        ))}
       </NavbarContent>
       <NavbarContent justify='end'>
         <NavbarItem className='hidden lg:flex '>
