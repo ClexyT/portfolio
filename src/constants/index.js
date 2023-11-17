@@ -31,11 +31,11 @@ export const navbarEs = [
     title: 'Portafolio'
   },
   {
-    id: 'about me',
+    id: 'about',
     title: 'Sobre mi'
   },
   {
-    id: 'contact me',
+    id: 'contact',
     title: 'Contactame'
   }
 ]
@@ -50,28 +50,19 @@ export const navbarEn = [
     title: 'Portfolio'
   },
   {
-    id: 'about me',
+    id: 'about',
     title: 'About me'
   },
   {
-    id: 'contact me',
+    id: 'contact',
     title: 'Contact me'
-  }
-]
-// ABOUT SECCION
-export const aboutMeEs = [
+  },
   {
-    id: 'about me',
-    title: 'Sobre mi',
-    description: 'Desarrollador Frontend con 2 años de experiencia',
-    image: '/images/AboutMe.jpg'
-  }
-]
-export const aboutMeEn = [
+    id: 'aboutMe',
+    title: 'Desarrollador Frontend con 2 años de experiencia'
+  },
   {
-    id: 'about me',
-    title: 'About me',
-    description: 'Frontend Developer with 2 years of experience',
-    image: '/images/AboutMe.jpg'
+    id: 'aboutMe',
+    title: 'Frontend Developer with 2 years of experience'
   }
 ]

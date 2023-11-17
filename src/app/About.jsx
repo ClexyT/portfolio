@@ -1,6 +1,9 @@
 import imagen from '../edurdo.jpeg'
 import Image from 'next/image'
+import { aboutMeEs, aboutMeEn } from '@constants'
 const About = () => {
+  const en = aboutMeEn
+  const es = aboutMeEs
   return (
     <>
       <div className='flex justify-center '>
