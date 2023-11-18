@@ -58,16 +58,3 @@ export const navbarEn = [
     title: 'Contact me'
   }
 ]
-// ABOUT SECCION
-export const aboutMeEs = [
-  {
-    id: 'aboutMe',
-    title: 'Desarrollador Frontend con 2 años de experiencia'
-  }
-]
-export const aboutMeEn = [
-  {
-    id: 'aboutMe',
-    title: 'Frontend Developer with 2 years of experience'
-  }
-]

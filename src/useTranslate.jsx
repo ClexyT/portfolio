@@ -1,28 +1,37 @@
-import React from 'react'
+import React, { createContext, useContext, useState } from 'react';
 
-const useTranslate = (languageA, languageB) => {
-  let Language
-  const [isTranslate, setTranslate] = React.useState(() => {
-    if (navigator.language.startsWith('es')) {
-      return (true)
-    } else {
-      return (false)
-    }
-  })
+const TranslateContext = createContext();
+
+export const useTranslate = (languageA, languageB) => {
+  const contextValue = useContext(TranslateContext);
+
+  if (!contextValue) {
+    throw new Error("useTranslate debe ser usado dentro de un TranslateProvider");
+  }
+
+  return contextValue;
+};
+
+export const TranslateProvider = ({ children }) => {
+  const [isTranslate, setTranslate] = useState(() => {
+    return navigator.language.startsWith('es');
+  });
+
   const handleTranslate = () => {
-    setTranslate(() => {
-      if (isTranslate === true) {
-        return false
-      } else {
-        return true
-      }
-    })
-  }
-  if (isTranslate === true) {
-    Language = languageB
-  } else if (isTranslate === false) {
-    Language = languageA
-  }
-  return { handleTranslate, Language, isTranslate }
-}
-export default useTranslate
+    setTranslate((prevTranslate) => !prevTranslate);
+  };
+
+  const Language = isTranslate ? languageB : languageA;
+
+  const value = {
+    handleTranslate,
+    isTranslate,
+    Language,
+  };
+
+  return (
+    <TranslateContext.Provider value={value}>
+      {children}
+    </TranslateContext.Provider>
+  );
+};
