@@ -1,13 +1,13 @@
 'use client'
 
-import About from './About'
+import Hero from './Hero'
 import Proyects from './Proyects'
 
 export default function page () {
   return (
     <>
-      <About />
-      <Proyects />
+      <Hero id='home' />
+      <Proyects id='portfolio' />
     </>
   )
 }

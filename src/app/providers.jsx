@@ -1,12 +1,15 @@
 'use client'
 import NavApp from '@/Components/NavApp'
 import { NextUIProvider } from '@nextui-org/react'
+import { TranslateProvider } from '@/useTranslate'
 
 export function Providers ({ children }) {
   return (
-    <NextUIProvider>
-      <NavApp />
-      {children}
-    </NextUIProvider>
+    <TranslateProvider>
+      <NextUIProvider>
+        <NavApp />
+        {children}
+      </NextUIProvider>
+    </TranslateProvider>
   )
 }

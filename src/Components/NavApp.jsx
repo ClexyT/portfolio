@@ -3,7 +3,7 @@ import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, Navba
 import { socialNetworks, navbarEn, navbarEs } from '@/constants'
 import { GrLanguage } from 'react-icons/gr'
 import DarkButton from './DarkButton'
-import useTranslate from '@/useTranslate'
+import { useTranslate } from '@/useTranslate'
 
 export default function NavApp () {
   const en = navbarEn
@@ -18,13 +18,13 @@ export default function NavApp () {
           className='sm:hidden'
         />
         <NavbarBrand>
-          <h1 className=' cursor-default hover:text-blue-800 dark:hover:text-blue-300'>{translate.isTranslate ? 'Mi Portafolio' : 'My Portfolio'}</h1>
+          <a href='/'className=' cursor-default hover:text-blue-800 dark:hover:text-blue-300'>{translate.isTranslate ? 'Mi Portafolio' : 'My Portfolio'}</a>
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className='hidden sm:flex gap-4' justify='center'>
         {translate.Language.map((nav, index) => (
           <NavbarItem key={nav.id} isActive>
-            <Link href={nav.id} color='foreground' aria-current='page' underline='hover'>{nav.title}</Link>
+            <Link href={`#${nav.id}`} color='foreground' aria-current='page' underline='hover'>{nav.title}</Link>
           </NavbarItem>
         ))}
       </NavbarContent>

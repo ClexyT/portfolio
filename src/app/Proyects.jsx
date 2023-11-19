@@ -1,6 +1,8 @@
 const Proyects = () => {
   return (
-    <div>Proyects</div>
+    <>
+      <h1>Proyects</h1>
+    </>
   )
 }
 export default Proyects
