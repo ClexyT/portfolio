@@ -120,11 +120,13 @@ export const AboutConst = [
   {
     AboutEs: [
       {
-        title: 'Sobre mi',
+        title: 'Sobre mi'
       }
-  ],
-  AboutEn:[
-
-  ]
+    ],
+    AboutEn: [
+      {
+        title: 'About me'
+      }
+    ]
   }
 ]

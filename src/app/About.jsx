@@ -1,7 +1,10 @@
-import { BrandStyles } from '@/constants'
+import { AboutConst, BrandStyles } from '@/constants'
 import { useTranslate } from '@/useTranslate'
 const About = () => {
-  const translate = useTranslate()
+  const About = AboutConst[0]
+  const en = About.AboutEn[0]
+  const es = About.AboutEs[0]
+  const translate = useTranslate(en, es)
   return (
     <div id='about'>
       <BrandStyles>

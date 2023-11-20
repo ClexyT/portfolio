@@ -10,10 +10,10 @@ const Proyects = () => {
   const es = Proyects.ProyectsEs[0]
   const translate = useTranslate(en, es)
   return (
-    <div id='portfolio'>
+    <div>
       {/* Header Section */}
       <BrandStyles>
-        <h1 className='flex sm:justify-start justify-center cursor-default font-semibold text-2xl hover:text-blue-800 dark:hover:text-blue-300'>{translate.Language.title}</h1>
+        <h1 id='portfolio' className='flex sm:justify-start justify-center cursor-default font-semibold text-2xl hover:text-blue-800 dark:hover:text-blue-300'>{translate.Language.title}</h1>
       </BrandStyles>
       {/* Project Section */}
       <div className='flex w-full h-auto items-center justify-center inset-x-0 backdrop-saturate-150 bg-background/70'>
