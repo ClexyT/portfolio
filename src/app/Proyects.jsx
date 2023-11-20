@@ -1,4 +1,4 @@
-import { ProyectsConst } from '@/constants'
+import { BrandStyles, ProyectsConst } from '@/constants'
 import { useTranslate } from '@/useTranslate'
 import { FaLink } from 'react-icons/fa6'
 import { FiGithub } from 'react-icons/fi'
@@ -12,25 +12,20 @@ const Proyects = () => {
   return (
     <div id='portfolio'>
       {/* Header Section */}
-      <div className='flex w-full h-auto items-center justify-center inset-x-0 backdrop-saturate-150 bg-background/70'>
-        <div className='flex px-6 gap-4 w-full relative flex-nowrap items-center justify-between max-w-[1024px]'>
-          <div className='flex basis-0 flex-grow flex-nowrap sm:justify-start justify-center bg-transparent items-center no-underline text-medium whitespace-nowrap box-border'>
-            <h1 className='flex sm:justify-start justify-center cursor-default font-semibold text-2xl hover:text-blue-800 dark:hover:text-blue-300'>{translate.Language.title}</h1>
-          </div>
-        </div>
-      </div>
-
+      <BrandStyles>
+        <h1 className='flex sm:justify-start justify-center cursor-default font-semibold text-2xl hover:text-blue-800 dark:hover:text-blue-300'>{translate.Language.title}</h1>
+      </BrandStyles>
       {/* Project Section */}
       <div className='flex w-full h-auto items-center justify-center inset-x-0 backdrop-saturate-150 bg-background/70'>
         <div className='flex py-10 px-6 w-full relative flex-nowrap items-center justify-between max-w-[1024px]'>
           <div className='flex items-center'>
-            <Image src={Proyects.image} alt='imagen' className='w-[25rem]' />
+            <Image src={Proyects.image} alt='imagen' className='border-black border-2  dark:border-slate-500 w-[25rem]' />
             <div className='ml-[7rem]'>
               <h1 className='flex items-start justify-center font-bold text-xl mb-5'>{translate.Language.proyect1.title}</h1>
               <p className='px-10 py-5'>{translate.Language.proyect1.description}</p>
               <div className='flex flex-row gap-8 justify-center mt-6'>
-                <Link href={translate.Language.proyect1.link}><FaLink size={60} /></Link>
-                <Link href={translate.Language.proyect1.github}><FiGithub size={60} /></Link>
+                <Link href={translate.Language.proyect1.link} target='_blank' rel='noreferrer'><FaLink size={60} /></Link>
+                <Link href={translate.Language.proyect1.github} target='_blank' rel='noreferrer'><FiGithub size={60} /></Link>
               </div>
             </div>
           </div>

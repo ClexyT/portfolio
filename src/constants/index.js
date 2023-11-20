@@ -22,6 +22,17 @@ export const socialNetworks = [
     src: [sm.Work.Employee.Linkedin]
   }
 ]
+export const BrandStyles = ({ children, customStyles }) => {
+  return (
+    <div className={`flex w-full h-auto items-center justify-center inset-x-0 ${customStyles}`}>
+      <div className='flex px-6 gap-4 w-full relative flex-nowrap items-center justify-between max-w-[1024px]'>
+        <div className='flex basis-0 flex-grow flex-nowrap sm:justify-start justify-center bg-transparent items-center no-underline text-medium whitespace-nowrap box-border'>
+          {children}
+        </div>
+      </div>
+    </div>
+  )
+}
 export const navbar = [
   {
     navbarEs: [
@@ -103,5 +114,17 @@ export const ProyectsConst = [
       }
     ],
     image: malit
+  }
+]
+export const AboutConst = [
+  {
+    AboutEs: [
+      {
+        title: 'Sobre mi',
+      }
+  ],
+  AboutEn:[
+
+  ]
   }
 ]
