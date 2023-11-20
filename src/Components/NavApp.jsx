@@ -1,13 +1,13 @@
 import React from 'react'
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link } from '@nextui-org/react'
-import { socialNetworks, navbarEn, navbarEs } from '@/constants'
+import { socialNetworks, navbar } from '@/constants'
 import { GrLanguage } from 'react-icons/gr'
 import DarkButton from './DarkButton'
 import { useTranslate } from '@/useTranslate'
 
 export default function NavApp () {
-  const en = navbarEn
-  const es = navbarEs
+  const en = navbar[0].navbarEn
+  const es = navbar[0].navbarEs
   const translate = useTranslate(en, es)
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
   return (
@@ -18,11 +18,11 @@ export default function NavApp () {
           className='sm:hidden'
         />
         <NavbarBrand>
-          <a href='/'className=' cursor-default hover:text-blue-800 dark:hover:text-blue-300'>{translate.isTranslate ? 'Mi Portafolio' : 'My Portfolio'}</a>
+          <a href='/' className='cursor-default font-semibold text-2xl hover:text-blue-800 dark:hover:text-blue-300'>{translate.isTranslate ? 'Mi Portafolio' : 'My Portfolio'} </a>
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className='hidden sm:flex gap-4' justify='center'>
-        {translate.Language.map((nav, index) => (
+        {translate.Language.map((nav) => (
           <NavbarItem key={nav.id} isActive>
             <Link href={`#${nav.id}`} color='foreground' aria-current='page' underline='hover'>{nav.title}</Link>
           </NavbarItem>

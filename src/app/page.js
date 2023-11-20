@@ -6,8 +6,10 @@ import Proyects from './Proyects'
 export default function page () {
   return (
     <>
-      <Hero id='home' />
-      <Proyects id='portfolio' />
+      <Hero />
+      <div className='my-[10rem]' />
+      <Proyects />
+      <div className='my-[10rem]' />
     </>
   )
 }

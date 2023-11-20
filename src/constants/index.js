@@ -1,5 +1,6 @@
 import { RiInstagramLine, RiTwitterXFill, RiGithubFill, RiLinkedinBoxFill } from 'react-icons/ri'
 import SM from '@/MediaTree.json'
+import { me, malit } from '@/images'
 const sm = SM[0].Links[0]
 
 // NAVBAR SECCION
@@ -21,40 +22,84 @@ export const socialNetworks = [
     src: [sm.Work.Employee.Linkedin]
   }
 ]
-export const navbarEs = [
+export const navbar = [
   {
-    id: 'home',
-    title: 'Inicio'
-  },
-  {
-    id: 'portfolio',
-    title: 'Portafolio'
-  },
-  {
-    id: 'about',
-    title: 'Sobre mi'
-  },
-  {
-    id: 'contact',
-    title: 'Contactame'
+    navbarEs: [
+      {
+        id: 'home',
+        title: 'Inicio'
+      },
+      {
+        id: 'portfolio',
+        title: 'Portafolio'
+      },
+      {
+        id: 'about',
+        title: 'Sobre mi'
+      },
+      {
+        id: 'contact',
+        title: 'Contactame'
+      }
+    ],
+    navbarEn: [
+      {
+        id: 'home',
+        title: 'Home'
+      },
+      {
+        id: 'portfolio',
+        title: 'Portfolio'
+      },
+      {
+        id: 'about',
+        title: 'About me'
+      },
+      {
+        id: 'contact',
+        title: 'Contact me'
+      }
+    ]
   }
 ]
-
-export const navbarEn = [
+export const HeroConst = [
   {
-    id: 'home',
-    title: 'Home'
-  },
+    HeroEs: [
+      {
+        description: 'Desarrollador Frontend con 2 años de experiencia'
+      }
+    ],
+    HeroEn: [
+      {
+        description: 'Frontend Developer with 2 years of experience'
+      }
+    ],
+    name: 'Eduardo Aguilar',
+    image: me
+  }
+]
+export const ProyectsConst = [
   {
-    id: 'portfolio',
-    title: 'Portfolio'
-  },
-  {
-    id: 'about',
-    title: 'About me'
-  },
-  {
-    id: 'contact',
-    title: 'Contact me'
+    ProyectsEs: [
+      {
+        title: 'Proyectos',
+        proyect1: {
+          title: 'MALIT',
+          description: 'Malit es una página hecha con mi equipo sin fines lucrativos, solo por experimentación',
+          link: 'https://www.malit.com.mx/experimental_features_malit'
+        }
+      }
+    ],
+    ProyectsEn: [
+      {
+        title: 'Proyects',
+        proyect1: {
+          title: 'MALIT',
+          description: 'Malit in an app made with my team without profit, just for experimentation',
+          link: 'https://www.malit.com.mx/experimental_features_malit'
+        }
+      }
+    ],
+    image: malit
   }
 ]
