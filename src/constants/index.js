@@ -86,7 +86,8 @@ export const ProyectsConst = [
         proyect1: {
           title: 'MALIT',
           description: 'Malit es una página hecha con mi equipo sin fines lucrativos, solo por experimentación',
-          link: 'https://www.malit.com.mx/experimental_features_malit'
+          link: 'https://www.malit.com.mx/experimental_features_malit',
+          github: 'https://github.com/JHUMBERTTO/Malit.git'
         }
       }
     ],
@@ -96,7 +97,8 @@ export const ProyectsConst = [
         proyect1: {
           title: 'MALIT',
           description: 'Malit in an app made with my team without profit, just for experimentation',
-          link: 'https://www.malit.com.mx/experimental_features_malit'
+          link: 'https://www.malit.com.mx/experimental_features_malit',
+          github: 'https://github.com/JHUMBERTTO/Malit.git'
         }
       }
     ],
