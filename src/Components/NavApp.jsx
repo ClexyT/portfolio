@@ -10,6 +10,7 @@ export default function NavApp () {
   const es = navbar[0].navbarEs
   const translate = useTranslate(en, es)
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
+
   return (
     <Navbar onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent>
@@ -35,7 +36,7 @@ export default function NavApp () {
               <Link key={src} href={src} target='_blank' className='transition-all duration-300 dark:text-white text-black hover:text-blue-800 dark:hover:text-blue-300' rel='noreferrer'>{logo}</Link>
             ))}
             <div className='flex'>
-              <button onClick={translate.handleTranslate} className=' transition-all duration-300 dark:invert invert-0 text-white hover:fill-blue-800 dark:hover:fill-blue-300'>
+              <button onClick={translate.handleTranslate} className='transition-all duration-300 dark:invert invert-0 text-white hover:fill-blue-800 dark:hover:fill-blue-300'>
                 <GrLanguage size='27' />
               </button>
               <div className='pl-8 pt-[0.12rem]'>
@@ -46,23 +47,28 @@ export default function NavApp () {
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
-        {translate.Language.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <Link
-              color={
-                index === 2 ? 'primary' : index === translate.Language.length - 1 ? 'danger' : 'foreground'
-              }
-              className='w-full'
-              href='#'
-              size='lg'
-            >
-              {item}
-              <button onClick={translate.handleTranslate} className=' transition-all duration-300 dark:invert invert-0  hover:fill-blue-800 dark:hover:fill-blue-300'>
-                <GrLanguage size='27' className='text-[36px] hover:scale-110 hover:text-blue-800 dark:hover:text-blue-300 transition-all !sm:mr-10 bg-transparent border-none !sm:mr-10' />
-              </button>
-            </Link>
-          </NavbarMenuItem>
-        ))}
+        <div className='pt-5'>
+          {translate.Language.map((item, index) => (
+            <NavbarMenuItem key={`${item.id}-${index}`} className='pt-3'>
+              <Link
+                color={
+                  index === 2 ? 'primary' : index === translate.Language.length - 1 ? 'danger' : 'foreground'
+                }
+                className='w-full'
+                href='#'
+                size='lg'
+              >
+                {item.title}
+              </Link>
+            </NavbarMenuItem>
+          ))}
+        </div>
+        <div className='flex gap-5 justify-center'>
+          <button onClick={translate.handleTranslate} className='pt-3  transition-all duration-300 dark:invert invert-0 hover:fill-blue-800 dark:hover:fill-blue-300'>
+            <GrLanguage size='27' className='text-[36px] hover:scale-110 hover:text-blue-800 dark:hover:text-blue-300 transition-all !sm:mr-10 bg-transparent border-none !sm:mr-10' />
+          </button>
+          <DarkButton />
+        </div>
       </NavbarMenu>
     </Navbar>
   )

@@ -23,7 +23,7 @@ const DarkButton = () => {
         onClick={handleTheme}
         className='text-[36px] mt-3 hover:scale-110 hover:text-blue-800 dark:hover:text-blue-300 transition-all !sm:mr-10 rotate-45 bg-transparent border-none !sm:mr-10 '
       >
-        {theme === 'light' ? '🌣' : '☽'}
+        {theme === 'light' ? '☽' : '🌣'}
       </button>
     </div>
   )

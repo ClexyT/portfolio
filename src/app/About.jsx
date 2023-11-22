@@ -10,6 +10,7 @@ const About = () => {
       <BrandStyles>
         <h1 className='flex sm:justify-start justify-center cursor-default font-semibold text-2xl hover:text-blue-800 dark:hover:text-blue-300'>{translate.Language.title}</h1>
       </BrandStyles>
+      <h2>Soy un programador frontened</h2>
     </div>
   )
 }
