@@ -2,6 +2,22 @@ import { RiInstagramLine, RiTwitterXFill, RiGithubFill, RiLinkedinBoxFill } from
 import SM from '@/MediaTree.json'
 import { me, malit } from '@/images'
 const sm = SM[0].Links[0]
+import {
+  FaHtml5,
+  FaCss3Alt,
+  SiJavascript,
+  SiTypescript,
+  FaReact,
+  FaPython,
+  SiSvelte,
+  SiTailwindcss,
+  SiRedux,
+  FaAngular,
+  TbBrandVite,
+  SiAstro,
+  SiNextdotjs,
+  FaNode,
+} from 'react-icons/all';
 
 // NAVBAR SECCION
 export const socialNetworks = [
@@ -120,12 +136,105 @@ export const AboutConst = [
   {
     AboutEs: [
       {
-        title: 'Sobre mi'
+        title: 'Sobre mi',
+        description: 'Soy un programador frontend con +3 años de experiencia, soy de la Ciudad de México y estoy dispuesto a tomar trabajos en linea o presenciales',
+        titleTech:'Tecnologias',
+        componentsTechImg: [
+  {
+    image: <FaHtml5 />,
+    alt: 'HTML',
+    name: 'HTML',
+    src: 'HTML',
+  },
+  {
+    image: <FaCss3Alt />,
+    alt: 'CSS',
+    name: 'CSS',
+    src: 'CSS',
+  },
+  {
+    image: <SiJavascript />,
+    alt: 'JavaScript',
+    name: 'JavaScript',
+    src: 'JavaScript',
+  },
+  {
+    image: <SiTypescript />,
+    alt: 'TypeScript',
+    name: 'TypeScript',
+    src: 'TypeScript',
+  },
+  {
+    image: <FaReact />,
+    alt: 'React',
+    name: 'React',
+    src: 'React',
+  },
+  {
+    image: <FaPython />,
+    alt: 'Python',
+    name: 'Python',
+    src: 'Python',
+  },
+  {
+    image: <SiSvelte />,
+    alt: 'Svelte',
+    name: 'Svelte',
+    src: 'Svelte',
+  },
+  {
+    image: <SiTailwindcss />,
+    alt: 'Tailwind CSS',
+    name: 'Tailwind CSS',
+    src: 'TailwindCSS',
+  },
+  {
+    image: <SiRedux />,
+    alt: 'Redux',
+    name: 'Redux',
+    src: 'Redux',
+  },
+  {
+    image: <FaAngular />,
+    alt: 'Angular',
+    name: 'Angular',
+    src: 'Angular',
+  },
+  {
+    image: <TbBrandVite />,
+    alt: 'Vite',
+    name: 'Vite',
+    src: 'Vite',
+  },
+  {
+    image: <SiAstro />,
+    alt: 'Astro',
+    name: 'Astro',
+    src: 'Astro',
+  },
+  {
+    image: <SiNextdotjs />,
+    alt: 'Next.js',
+    name: 'Next.js',
+    src: 'NextJS',
+  },
+  {
+    image: <FaNode />,
+    alt: 'Node.js',
+    name: 'Node.js',
+    src: 'NodeJS',
+  },
+],
+        componentsTechDes:''  
       }
     ],
     AboutEn: [
       {
-        title: 'About me'
+        title: 'About me',
+        description: 'I am a frontend programmer with +3 years of experience, I am from Mexico City and I am willing to take online or in-person jobs',
+        titleTech:'Technologies',
+        componentsTechImg:'',
+        componentsTechDes:''
       }
     ]
   }
