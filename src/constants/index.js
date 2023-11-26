@@ -227,17 +227,100 @@ export const AboutConst = [
             name: 'Node.js',
             src: 'https://nodejs.org/'
           }
-        ],
-        componentsTechDes: ''
+        ]
       }
     ],
-    AboutEn: [
+    AboutEN: [
       {
         title: 'About me',
         description: 'I am a frontend programmer with +3 years of experience, I am from Mexico City and I am willing to take online or in-person jobs',
         titleTech: 'Technologies',
-        componentsTechImg: '',
-        componentsTechDes: ''
+        componentsTechImg: [
+          {
+            image: <FaHtml5 />,
+            alt: 'HTML',
+            name: 'HTML',
+            src: 'https://developer.mozilla.org/en-US/docs/Web/HTML'
+          },
+          {
+            image: <FaCss3Alt />,
+            alt: 'CSS',
+            name: 'CSS',
+            src: 'https://developer.mozilla.org/en-US/docs/Web/CSS'
+          },
+          {
+            image: <SiJavascript />,
+            alt: 'JavaScript',
+            name: 'JavaScript',
+            src: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
+          },
+          {
+            image: <SiTypescript />,
+            alt: 'TypeScript',
+            name: 'TypeScript',
+            src: 'https://www.typescriptlang.org/'
+          },
+          {
+            image: <FaReact />,
+            alt: 'React',
+            name: 'React',
+            src: 'https://reactjs.org/'
+          },
+          {
+            image: <FaPython />,
+            alt: 'Python',
+            name: 'Python',
+            src: 'https://www.python.org/'
+          },
+          {
+            image: <SiSvelte />,
+            alt: 'Svelte',
+            name: 'Svelte',
+            src: 'https://svelte.dev/'
+          },
+          {
+            image: <SiTailwindcss />,
+            alt: 'Tailwind CSS',
+            name: 'Tailwind CSS',
+            src: 'https://tailwindcss.com/'
+          },
+          {
+            image: <SiRedux />,
+            alt: 'Redux',
+            name: 'Redux',
+            src: 'https://redux.js.org/'
+          },
+          {
+            image: <FaAngular />,
+            alt: 'Angular',
+            name: 'Angular',
+            src: 'https://angular.io/'
+          },
+          {
+            image: <TbBrandVite />,
+            alt: 'Vite',
+            name: 'Vite',
+            src: 'https://vitejs.dev/'
+          },
+          {
+            image: <SiAstro />,
+            alt: 'Astro',
+            name: 'Astro',
+            src: 'https://astro.build/'
+          },
+          {
+            image: <SiNextdotjs />,
+            alt: 'Next.js',
+            name: 'Next.js',
+            src: 'https://nextjs.org/'
+          },
+          {
+            image: <FaNode />,
+            alt: 'Node.js',
+            name: 'Node.js',
+            src: 'https://nodejs.org/'
+          }
+        ]
       }
     ]
   }
