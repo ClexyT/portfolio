@@ -1,23 +1,12 @@
+import { FaHtml5, FaCss3Alt, FaReact, FaPython, FaAngular, FaNode } from 'react-icons/fa'
+import { SiJavascript, SiTypescript, SiSvelte, SiTailwindcss, SiRedux, SiAstro, SiNextdotjs } from 'react-icons/si'
+import { TbBrandVite } from 'react-icons/tb'
 import {
-  FaHtml5,
-  FaCss3Alt,
-  SiJavascript,
-  SiTypescript,
-  FaReact,
-  FaPython,
-  SiSvelte,
-  SiTailwindcss,
-  SiRedux,
-  FaAngular,
-  TbBrandVite,
-  SiAstro,
-  SiNextdotjs,
-  FaNode,
   RiInstagramLine,
   RiTwitterXFill,
   RiGithubFill,
   RiLinkedinBoxFill
-} from 'react-icons/all'
+} from 'react-icons/ri'
 import SM from '@/MediaTree.json'
 import { me, malit } from '@/images'
 const sm = SM[0].Links[0]
@@ -230,7 +219,7 @@ export const AboutConst = [
         ]
       }
     ],
-    AboutEN: [
+    AboutEn: [
       {
         title: 'About me',
         description: 'I am a frontend programmer with +3 years of experience, I am from Mexico City and I am willing to take online or in-person jobs',
