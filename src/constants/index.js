@@ -133,85 +133,85 @@ export const AboutConst = [
         titleTech: 'Tecnologias',
         componentsTechImg: [
           {
-            image: <FaHtml5 />,
+            image: <FaHtml5 size='50' />,
             alt: 'HTML',
             name: 'HTML',
             src: 'https://developer.mozilla.org/en-US/docs/Web/HTML'
           },
           {
-            image: <FaCss3Alt />,
+            image: <FaCss3Alt size='50' />,
             alt: 'CSS',
             name: 'CSS',
             src: 'https://developer.mozilla.org/en-US/docs/Web/CSS'
           },
           {
-            image: <SiJavascript />,
+            image: <SiJavascript size='50' />,
             alt: 'JavaScript',
             name: 'JavaScript',
             src: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
           },
           {
-            image: <SiTypescript />,
+            image: <SiTypescript size='50' />,
             alt: 'TypeScript',
             name: 'TypeScript',
             src: 'https://www.typescriptlang.org/'
           },
           {
-            image: <FaReact />,
+            image: <FaReact size='50' />,
             alt: 'React',
             name: 'React',
             src: 'https://reactjs.org/'
           },
           {
-            image: <FaPython />,
+            image: <FaPython size='50' />,
             alt: 'Python',
             name: 'Python',
             src: 'https://www.python.org/'
           },
           {
-            image: <SiSvelte />,
+            image: <SiSvelte size='50' />,
             alt: 'Svelte',
             name: 'Svelte',
             src: 'https://svelte.dev/'
           },
           {
-            image: <SiTailwindcss />,
+            image: <SiTailwindcss size='50' />,
             alt: 'Tailwind CSS',
             name: 'Tailwind CSS',
             src: 'https://tailwindcss.com/'
           },
           {
-            image: <SiRedux />,
+            image: <SiRedux size='50' />,
             alt: 'Redux',
             name: 'Redux',
             src: 'https://redux.js.org/'
           },
           {
-            image: <FaAngular />,
+            image: <FaAngular size='50' />,
             alt: 'Angular',
             name: 'Angular',
             src: 'https://angular.io/'
           },
           {
-            image: <TbBrandVite />,
+            image: <TbBrandVite size='50' />,
             alt: 'Vite',
             name: 'Vite',
             src: 'https://vitejs.dev/'
           },
           {
-            image: <SiAstro />,
+            image: <SiAstro size='50' />,
             alt: 'Astro',
             name: 'Astro',
             src: 'https://astro.build/'
           },
           {
-            image: <SiNextdotjs />,
+            image: <SiNextdotjs size='50' />,
             alt: 'Next.js',
             name: 'Next.js',
             src: 'https://nextjs.org/'
           },
           {
-            image: <FaNode />,
+            image: <FaNode size='50' />,
             alt: 'Node.js',
             name: 'Node.js',
             src: 'https://nodejs.org/'
@@ -226,88 +226,102 @@ export const AboutConst = [
         titleTech: 'Technologies',
         componentsTechImg: [
           {
-            image: <FaHtml5 />,
+            image: <FaHtml5 size='50' />,
             alt: 'HTML',
             name: 'HTML',
-            src: 'https://developer.mozilla.org/en-US/docs/Web/HTML'
+            src: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
+            color: 'orange-700'
           },
           {
-            image: <FaCss3Alt />,
+            image: <FaCss3Alt size='50' />,
             alt: 'CSS',
             name: 'CSS',
-            src: 'https://developer.mozilla.org/en-US/docs/Web/CSS'
+            src: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+            color: 'blue-600'
           },
           {
-            image: <SiJavascript />,
+            image: <SiJavascript size='50' />,
             alt: 'JavaScript',
             name: 'JavaScript',
-            src: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
+            src: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+            color: 'yellow-400'
           },
           {
-            image: <SiTypescript />,
+            image: <SiTypescript size='50' />,
             alt: 'TypeScript',
             name: 'TypeScript',
-            src: 'https://www.typescriptlang.org/'
+            src: 'https://www.typescriptlang.org/',
+            color: '[3077c5]'
           },
           {
-            image: <FaReact />,
+            image: <FaReact size='50' />,
             alt: 'React',
             name: 'React',
-            src: 'https://reactjs.org/'
+            src: 'https://reactjs.org/',
+            color: 'blue-400'
           },
           {
-            image: <FaPython />,
+            image: <FaPython size='50' />,
             alt: 'Python',
             name: 'Python',
-            src: 'https://www.python.org/'
+            src: 'https://www.python.org/',
+            color: 'blue-400'
           },
           {
-            image: <SiSvelte />,
+            image: <SiSvelte size='50' />,
             alt: 'Svelte',
             name: 'Svelte',
-            src: 'https://svelte.dev/'
+            src: 'https://svelte.dev/',
+            color: 'orange-700'
           },
           {
-            image: <SiTailwindcss />,
+            image: <SiTailwindcss size='50' />,
             alt: 'Tailwind CSS',
             name: 'Tailwind CSS',
-            src: 'https://tailwindcss.com/'
+            src: 'https://tailwindcss.com/',
+            color: 'blue-600'
           },
           {
-            image: <SiRedux />,
+            image: <SiRedux size='50' />,
             alt: 'Redux',
             name: 'Redux',
-            src: 'https://redux.js.org/'
+            src: 'https://redux.js.org/',
+            color: 'purple-600'
           },
           {
-            image: <FaAngular />,
+            image: <FaAngular size='50' />,
             alt: 'Angular',
             name: 'Angular',
-            src: 'https://angular.io/'
+            src: 'https://angular.io/',
+            color: 'red-600'
           },
           {
-            image: <TbBrandVite />,
+            image: <TbBrandVite size='50' />,
             alt: 'Vite',
             name: 'Vite',
-            src: 'https://vitejs.dev/'
+            src: 'https://vitejs.dev/',
+            color: 'blue-400'
           },
           {
-            image: <SiAstro />,
+            image: <SiAstro size='50' />,
             alt: 'Astro',
             name: 'Astro',
-            src: 'https://astro.build/'
+            src: 'https://astro.build/',
+            color: 'blue-400'
           },
           {
-            image: <SiNextdotjs />,
+            image: <SiNextdotjs size='50' />,
             alt: 'Next.js',
             name: 'Next.js',
-            src: 'https://nextjs.org/'
+            src: 'https://nextjs.org/',
+            color: 'blue-400'
           },
           {
-            image: <FaNode />,
+            image: <FaNode size='50' />,
             alt: 'Node.js',
             name: 'Node.js',
-            src: 'https://nodejs.org/'
+            src: 'https://nodejs.org/',
+            color: 'green-500'
           }
         ]
       }

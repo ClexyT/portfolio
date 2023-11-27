@@ -36,7 +36,7 @@ export default function NavApp () {
               <Link key={src} href={src} target='_blank' className='transition-all duration-300 dark:text-white text-black hover:text-blue-800 dark:hover:text-blue-300' rel='noreferrer'>{logo}</Link>
             ))}
             <div className='flex'>
-              <button onClick={translate.handleTranslate} className='transition-all duration-300 dark:invert invert-0 text-white hover:fill-blue-800 dark:hover:fill-blue-300'>
+              <button onClick={translate.handleTranslate} className='duration-300 dark:invert-0 invert hover:scale-110 hover:text-blue-800 dark:hover:text-blue-300 transition-all text-white active:text-red-500'>
                 <GrLanguage size='27' />
               </button>
               <div className='pl-8 pt-[0.12rem]'>
@@ -64,8 +64,8 @@ export default function NavApp () {
           ))}
         </div>
         <div className='flex gap-5 justify-center'>
-          <button onClick={translate.handleTranslate} className='pt-3  transition-all duration-300 dark:invert invert-0 hover:fill-blue-800 dark:hover:fill-blue-300'>
-            <GrLanguage size='27' className='text-[36px] hover:scale-110 hover:text-blue-800 dark:hover:text-blue-300 transition-all !sm:mr-10 bg-transparent border-none !sm:mr-10' />
+          <button onClick={translate.handleTranslate} className='pt-3  over:scale-110 hover:text-blue-800 dark:hover:text-blue-300 transition-all duration-300 dark:invert invert-0 hover:fill-blue-800 dark:hover:fill-blue-300'>
+            <GrLanguage size='27' className='text-[36px] hover:scale-110 hover:text-blue-800 dark:hover:text-blue-300 transition-all !sm:mr-10 bg-transparent border-none !sm:mr-10 active:text-red-500' />
           </button>
           <DarkButton />
         </div>

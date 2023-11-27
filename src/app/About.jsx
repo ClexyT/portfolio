@@ -1,6 +1,5 @@
 import { AboutConst, BrandStyles } from '@/constants'
 import { useTranslate } from '@/useTranslate'
-import Image from 'next/image'
 import Link from 'next/link'
 
 const About = () => {
@@ -13,25 +12,28 @@ const About = () => {
   return (
     <div id='about'>
       <BrandStyles>
-        <h1 className='flex sm:justify-start justify-center cursor-default font-semibold text-2xl hover:text-blue-800 dark:hover:text-blue-300'>
+        <h1 className='flex sm:justify-start justify-center cursor-default font-semibold text-2xl'>
           {translate.Language.title}
         </h1>
       </BrandStyles>
       <h2 className='m-5'>{translate.Language.description}</h2>
       <BrandStyles>
-        <h1 className='flex sm:justify-start justify-center cursor-default font-medium text-lg hover:text-blue-800 dark:hover:text-blue-300'>
+        <h1 className='flex sm:justify-start justify-center cursor-default font-medium text-lg '>
           {translate.Language.titleTech}
         </h1>
       </BrandStyles>
       <div>
         <ul>
-          {techLogos.map((logo, index) => (
-            <li key={index}>
-              <Link href={logo.src}>
-                {logo.image}
-              </Link>
-            </li>
-          ))}
+          <div class='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 m-7'>
+            {techLogos.map((logo, index) => (
+              <div key={index} class='flex items-center justify-center '>
+                <Link href={logo.src} className={`hover:text-${logo.color}`}>
+                  {logo.image}
+                </Link>
+              </div>
+            ))}
+          </div>
+
         </ul>
       </div>
     </div>
