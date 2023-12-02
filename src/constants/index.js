@@ -133,37 +133,37 @@ export const AboutConst = [
         titleTech: 'Tecnologias',
         componentsTechImg: [
           {
-            image: <FaHtml5 size='50' />,
+            image: <FaHtml5 size='50' className='text-orange-500' />,
             alt: 'HTML',
             name: 'HTML',
             src: 'https://developer.mozilla.org/en-US/docs/Web/HTML'
           },
           {
-            image: <FaCss3Alt size='50' />,
+            image: <FaCss3Alt size='50' className='text-blue-500' />,
             alt: 'CSS',
             name: 'CSS',
             src: 'https://developer.mozilla.org/en-US/docs/Web/CSS'
           },
           {
-            image: <SiJavascript size='50' />,
+            image: <SiJavascript size='50' className='text-yellow-300' />,
             alt: 'JavaScript',
             name: 'JavaScript',
             src: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
           },
           {
-            image: <SiTypescript size='50' />,
+            image: <SiTypescript size='50' className='text-blue-600' />,
             alt: 'TypeScript',
             name: 'TypeScript',
             src: 'https://www.typescriptlang.org/'
           },
           {
-            image: <FaReact size='50' />,
+            image: <FaReact size='50' className='text-cyan-400' />,
             alt: 'React',
             name: 'React',
             src: 'https://reactjs.org/'
           },
           {
-            image: <FaPython size='50' />,
+            image: <FaPython size='50' className='text-yellow-600' />,
             alt: 'Python',
             name: 'Python',
             src: 'https://www.python.org/'
@@ -172,46 +172,49 @@ export const AboutConst = [
             image: <SiSvelte size='50' />,
             alt: 'Svelte',
             name: 'Svelte',
-            src: 'https://svelte.dev/'
+            src: 'https://svelte.dev/',
+            color: 'text-indigo-600'
           },
           {
             image: <SiTailwindcss size='50' />,
             alt: 'Tailwind CSS',
             name: 'Tailwind CSS',
-            src: 'https://tailwindcss.com/'
+            src: 'https://tailwindcss.com/',
+            color: 'text-indigo-600'
           },
           {
             image: <SiRedux size='50' />,
             alt: 'Redux',
             name: 'Redux',
-            src: 'https://redux.js.org/'
+            src: 'https://redux.js.org/',
+            color: 'text-indigo-600'
           },
           {
-            image: <FaAngular size='50' />,
+            image: <FaAngular size='50' className='text-red-600' />,
             alt: 'Angular',
             name: 'Angular',
             src: 'https://angular.io/'
           },
           {
-            image: <TbBrandVite size='50' />,
+            image: <TbBrandVite size='50' className='text-purple-500' />,
             alt: 'Vite',
             name: 'Vite',
             src: 'https://vitejs.dev/'
           },
           {
-            image: <SiAstro size='50' />,
+            image: <SiAstro size='50' className='text-purple-800' />,
             alt: 'Astro',
             name: 'Astro',
             src: 'https://astro.build/'
           },
           {
-            image: <SiNextdotjs size='50' />,
+            image: <SiNextdotjs size='50' className='text-slate-600' />,
             alt: 'Next.js',
             name: 'Next.js',
             src: 'https://nextjs.org/'
           },
           {
-            image: <FaNode size='50' />,
+            image: <FaNode size='50' className='text-green-800' />,
             alt: 'Node.js',
             name: 'Node.js',
             src: 'https://nodejs.org/'
@@ -226,103 +229,90 @@ export const AboutConst = [
         titleTech: 'Technologies',
         componentsTechImg: [
           {
-            image: <FaHtml5 size='50' />,
+            image: <FaHtml5 size='50' className='text-orange-500' />,
             alt: 'HTML',
             name: 'HTML',
-            src: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
-            color: 'orange-700'
+            src: 'https://developer.mozilla.org/en-US/docs/Web/HTML'
           },
           {
-            image: <FaCss3Alt size='50' />,
+            image: <FaCss3Alt size='50' className='text-blue-500' />,
             alt: 'CSS',
             name: 'CSS',
-            src: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
-            color: 'blue-600'
+            src: 'https://developer.mozilla.org/en-US/docs/Web/CSS'
           },
           {
-            image: <SiJavascript size='50' />,
+            image: <SiJavascript size='50' className='text-yellow-300' />,
             alt: 'JavaScript',
             name: 'JavaScript',
-            src: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
-            color: 'yellow-400'
+            src: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
           },
           {
-            image: <SiTypescript size='50' />,
+            image: <SiTypescript size='50' className='text-blue-600' />,
             alt: 'TypeScript',
             name: 'TypeScript',
-            src: 'https://www.typescriptlang.org/',
-            color: '[3077c5]'
+            src: 'https://www.typescriptlang.org/'
           },
           {
-            image: <FaReact size='50' />,
+            image: <FaReact size='50' className='text-cyan-400' />,
             alt: 'React',
             name: 'React',
-            src: 'https://reactjs.org/',
-            color: 'blue-400'
+            src: 'https://reactjs.org/'
           },
           {
-            image: <FaPython size='50' />,
+            image: <FaPython size='50' className='text-yellow-600' />,
             alt: 'Python',
             name: 'Python',
-            src: 'https://www.python.org/',
-            color: 'blue-400'
+            src: 'https://www.python.org/'
           },
           {
-            image: <SiSvelte size='50' />,
+            image: <SiSvelte size='50' className='text-orange-500' />,
             alt: 'Svelte',
             name: 'Svelte',
-            src: 'https://svelte.dev/',
-            color: 'orange-700'
+            src: 'https://svelte.dev/'
           },
           {
-            image: <SiTailwindcss size='50' />,
+            image: <SiTailwindcss size='50' className='text-blue-400' />,
             alt: 'Tailwind CSS',
             name: 'Tailwind CSS',
-            src: 'https://tailwindcss.com/',
-            color: 'blue-600'
+            src: 'https://tailwindcss.com/'
           },
           {
-            image: <SiRedux size='50' />,
+            image: <SiRedux size='50' className='text-indigo-600' />,
             alt: 'Redux',
             name: 'Redux',
-            src: 'https://redux.js.org/',
-            color: 'purple-600'
+            src: 'https://redux.js.org/'
           },
           {
-            image: <FaAngular size='50' />,
+            image: <FaAngular size='50' className='text-red-600' />,
             alt: 'Angular',
             name: 'Angular',
-            src: 'https://angular.io/',
-            color: 'red-600'
+            src: 'https://angular.io/'
           },
           {
-            image: <TbBrandVite size='50' />,
+            image: <TbBrandVite size='50' className='text-purple-500' />,
             alt: 'Vite',
             name: 'Vite',
-            src: 'https://vitejs.dev/',
-            color: 'blue-400'
+            src: 'https://vitejs.dev/'
           },
           {
-            image: <SiAstro size='50' />,
+            image: <SiAstro size='50' className='text-purple-800' />,
             alt: 'Astro',
             name: 'Astro',
-            src: 'https://astro.build/',
-            color: 'blue-400'
+            src: 'https://astro.build/'
           },
           {
-            image: <SiNextdotjs size='50' />,
+            image: <SiNextdotjs size='50' className='text-slate-600' />,
             alt: 'Next.js',
             name: 'Next.js',
-            src: 'https://nextjs.org/',
-            color: 'blue-400'
+            src: 'https://nextjs.org/'
           },
           {
-            image: <FaNode size='50' />,
+            image: <FaNode size='50' className='text-green-800' />,
             alt: 'Node.js',
             name: 'Node.js',
-            src: 'https://nodejs.org/',
-            color: 'green-500'
+            src: 'https://nodejs.org/'
           }
+
         ]
       }
     ]
